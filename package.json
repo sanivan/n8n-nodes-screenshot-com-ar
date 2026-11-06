@@ -1,0 +1,60 @@
+{
+	"name": "n8n-nodes-screenshot-com-ar",
+	"version": "0.1.0",
+	"description": "n8n node for screenshot.com.ar: take screenshots of any web page and read pages as clean markdown, rendered in a real browser.",
+	"license": "MIT",
+	"homepage": "https://screenshot.com.ar",
+	"keywords": [
+		"n8n-community-node-package",
+		"n8n",
+		"screenshot",
+		"web screenshot",
+		"markdown",
+		"web scraping",
+		"browser"
+	],
+	"author": {
+		"name": "screenshot.com.ar",
+		"email": "hola@screenshot.com.ar"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/sanivan/n8n-nodes-screenshot-com-ar.git"
+	},
+	"scripts": {
+		"build": "n8n-node build",
+		"build:watch": "tsc --watch",
+		"dev": "n8n-node dev",
+		"lint": "n8n-node lint",
+		"lint:fix": "n8n-node lint --fix",
+		"release": "n8n-node release",
+		"prepublishOnly": "n8n-node prerelease"
+	},
+	"files": [
+		"dist",
+		"!dist/tsconfig.tsbuildinfo"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": true,
+		"credentials": [
+			"dist/credentials/ScreenshotComArApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/ScreenshotComAr/ScreenshotComAr.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "0.55.5",
+		"eslint": "9.39.4",
+		"prettier": "3.8.3",
+		"release-it": "20.2.0",
+		"typescript": "5.9.3"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	},
+	"bugs": {
+		"url": "https://github.com/sanivan/n8n-nodes-screenshot-com-ar/issues"
+	}
+}
